@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cookie Snapshot</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Cookie Snapshots</h1>
+        <div class="button-group">
+            <button id="updateBtn">Update</button>
+        </div>
+        
+
+        <table id="cookieTable">
+            <thead>
+                <tr>
+                    <th>name</th>
+                    <th>Domain</th>
+                    <th>Path</th>
+                    <th>Value</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <section class="snapshot-section">
+            <h2>Domain Cookie Snapshots</h2>
+            <table id="cookieTable">
+                <thead>
+                    <tr>
+                        <th>Snapshot</th>
+                        <th>Hash</th>
+                        <th>Count</th>
+                        <th>Look</th>
+                    </tr>
+                </thead>
+                <tbody id="snapshotBody"></tbody>
+            </table>
+            <div class="button-group">
+                <button id="saveSnapshot">Save Snapshot</button>
+                <button id="compareSnapshots">Compare Selected Snapshots</button>
+                <button id="clear">Clear Now cookies</button>
+            </div>
+        </section>
+
+        <section class="snapshot-section">
+            <h2>All Cookie Snapshots</h2>
+            <table id="allCookieTable">
+                <thead>
+                    <tr>
+                        <th>Snapshot</th>
+                        <th>Hash</th>
+                        <th>Count</th>
+                        <th>Look</th>
+                    </tr>
+                </thead>
+                <tbody id="snapshotAllBody"></tbody>
+            </table>
+            <div class="button-group">
+                <button id="saveAllSnapshot">Save Snapshot</button>
+                <button id="compareAllSnapshots">Compare Selected Snapshots</button>
+                <button id="clearAll">Clear All Cookies</button>
+            </div>
+        </section>
+
+        <section class="snapshot-section">
+            <h2>Comparison Results</h2>
+            <table id="comparsionTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Cookie1</th>
+                        <th>Cookie2</th>
+                        <th>Look</th>
+                    </tr>
+                </thead>
+                <tbody id="comparsionBody"></tbody>
+            </table>
+        </section>
+
+        <div id="comparsionDetails" class="details"></div>
+
+        <section class="interception-section">
+            <h2>Request Interception</h2>
+            <div class="button-group">
+                <button id="startBtn">Start</button>
+                <button id="pauseBtn">Pause</button>
+                <button id="clearBtn">Clear</button>
+            </div>
+            <table id="requestGroup">
+                <thead>
+                    <tr>
+                        <th>Snapshot</th>
+                        <th>Hash</th>
+                        <th>Count</th>
+                        <th>Look</th>
+                    </tr>
+                </thead>
+                <tbody id="requestGroupBody"></tbody>
+            </table>
+        </section>
+
+        <div id="dialog" class="dialog" style="display: none;">
+            <div class="dialogHeader">
+                <span class="close" id="closeDialog">&times;</span>
+            </div>
+            <div class="dialogContent" id="dialogContent"></div>
+        </div>
+    </div>
+
+    <script src="md5.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>

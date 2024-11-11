@@ -1,0 +1,41 @@
+{
+    "manifest_version": 3,
+    "name": "2FA Extension",
+    "version": "1.0",
+    "permissions": ["tabs", "activeTab", "cookies", "contentSettings", "webRequest", "storage", "scripting", "contextMenus", "sidePanel", "notifications"],
+    "icons": {
+        "16": "icons/icon16.png",
+        "24": "icons/icon32.png",
+        "32": "icons/icon32.png",
+        "48": "icons/icon48.png",
+        "96": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "action": {
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "24": "icons/icon32.png",
+            "32": "icons/icon32.png",
+            "48": "icons/icon48.png",
+            "96": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        },
+        "default_title": "Click to open panel"
+    },
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
+    "side_panel": {
+        "default_path": "/popup/popup.html"
+    }
+
+}
