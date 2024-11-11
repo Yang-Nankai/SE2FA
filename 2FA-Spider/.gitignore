@@ -1,0 +1,10 @@
+
+./idea
+
+data/progress.json
+data/searxng-result.csv
+data/process_result.json
+
+src/__pycache__/*
+tests/__pycache__/*
+process/__pycache__/*
