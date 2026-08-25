@@ -1,3 +1,5 @@
+
+
 # SE2FA - Website 2FA Security Evaluation Framework
 
 SE2FA is a framework designed for evaluating the security of website 2FA systems. This repository contains the code for two important components that make up the SE2FA framework:
@@ -5,7 +7,7 @@ SE2FA is a framework designed for evaluating the security of website 2FA systems
 ## Components
 
 ### 1. **2FA Spider**
-The 2FA Spider is a crawler that uses a meta search engine to discover websites that support 2FA, including relevant 2FA documentation. It helps in automatically identifying and cataloging websites with 2FA implementations for further security assessment. If you want to run this program, please read the README.md in 2FA Spider Directory.
+The 2FA Spider is a crawler that uses a meta search engine to discover websites that support 2FA, including relevant 2FA documentation. It helps in automatically identifying and cataloging websites with 2FA implementations for further security assessment. If you want to run this program, please read the README.md in the `2FA-Spider` directory.
 
 ### 2. **2FA Extension**
 The 2FA Extension is a Google Chrome plugin that accelerates the extraction of 2FA cookies. It offers the following functionalities:
